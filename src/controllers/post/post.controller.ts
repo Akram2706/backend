@@ -185,3 +185,5 @@ deletePost = async (req: Request, res: Response) => {
 }
 
 export default new PostController();
+
+
