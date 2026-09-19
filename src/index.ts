@@ -1,9 +1,14 @@
 import express from "express";
+import cors from "cors";
 import categoryRouter from "./routes/category/category.route";
 import postRouter from "./routes/post/post.route";
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
+
+// WAJIB sebelum route lain. Tanpa ini, Flutter Web (Chrome) kena blokir
+// CORS dari browser dengan pesan "ClientException: Failed to fetch".
+app.use(cors());
 
 app.use(express.json());
 

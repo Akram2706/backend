@@ -7,7 +7,7 @@ export const uploadToCloudinary = (
     return new Promise((resolve, reject) => {
         const uploadStream = cloudinary.uploader.upload_stream(
             {
-                folder: "blog-app",
+                folder: "post",
                 resource_type: "image",
             },
             (error, result) => {
